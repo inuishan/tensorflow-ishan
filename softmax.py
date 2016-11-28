@@ -3,7 +3,7 @@ __time__ = '28/11/16'
 
 """Softmax."""
 
-scores = [3.0, 1.0, 0.2]
+scores = [[3.0, 1.0, 0.2], [3.0, 1.0, 0.2]]
 
 import numpy as np
 
@@ -11,7 +11,7 @@ def softmax(x):
 	"""Compute softmax values for each sets of scores in x."""
 	y = np.exp(x)
 	print(y)
-	z = np.divide(y, np.sum(y))
+	z = np.divide(y, np.sum(y, axis=0))
 	print(z)
 	return z
 
